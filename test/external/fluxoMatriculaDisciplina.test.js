@@ -1,11 +1,12 @@
 import { api } from '../helpers/api.js';
 import { expect } from 'chai';
+import 'dotenv/config';
 import { comTokenDeAdmin } from '../helpers/auth.js';
 import { novoAluno } from '../factories/alunosFactory.js';
 import { novaDisciplina } from '../factories/disciplinasFactory.js';
 
 describe('Matrícula de Aluno em Disciplina', () => {
-    it('Validar que um aluno que acaba de ser cadastrado pode ser matriculado em uma nova disciplina', async () => {
+    it.only('Validar que um aluno que acaba de ser cadastrado pode ser matriculado em uma nova disciplina', async () => {
 
         const cadastroAlunoResposta = await api()
             .post('/api/admin/alunos')
