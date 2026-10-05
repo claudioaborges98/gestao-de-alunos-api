@@ -13,7 +13,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@faker-js/faker": "^10.6.0",
     "bcrypt": "^6.0.0",
     "chai": "^6.3.0",
     "cors": "^2.8.5",
@@ -29,6 +28,7 @@
     "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
+    "@faker-js/faker": "^10.6.0",
     "nodemon": "^3.1.4"
   }
 }
