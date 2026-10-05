@@ -19,6 +19,18 @@ export async function comTokenDeAdmin() {
     return `Bearer ${tokenEmCache}`;
 }
 
+export async function comTokenDeAluno(emailUser, passUser) {
+    const loginResposta = await api()
+        .post('/api/auth/login')
+        .set('Content-Type', 'application/json')
+        .send({
+            email: emailUser,
+            senha: passUser
+        });
+
+    return `Bearer ${loginResposta.body.token}`;
+}
+
 export async function getToken(emailUser, passUser) {
     const loginResposta = await api()
         .post('/api/auth/login')
